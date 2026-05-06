@@ -1,5 +1,3 @@
-
-
 import psycopg2
 import face_recognition
 
@@ -15,9 +13,12 @@ conn = psycopg2.connect(
 cursor = conn.cursor()
 
 # 🔹 Load image
-image = face_recognition.load_image_file("test.jpg")
+nikhitha1 = face_recognition.load_image_file("dataset/nikhitha1.jpg")
+nikhitha2 = face_recognition.load_image_file("dataset/nikhitha2.jpg")
+sunny = face_recognition.load_image_file("dataset/sunny.jpg")
 
 # 🔹 Get face encodings
+image = face_recognition.load_image_file("dataset/nikhitha1.jpg")
 encodings = face_recognition.face_encodings(image)
 
 print("Encodings found:", len(encodings))
